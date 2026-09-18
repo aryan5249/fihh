@@ -6,8 +6,12 @@ class Game{
         this.height = this.canvas.height;
         this.baseHeight = 720;
         this.ratio = this.height / this.baseHeight;
+        this.background = new Background(this);
         this.player = new Player(this);
         this.gravity;
+        this.speed;
+        this.obstacles = [];
+        this.numberOfObstacles = 10;
 
         this.resize(window.innerWidth, window.innerHeight);
 
@@ -34,12 +38,16 @@ class Game{
         this.width = this.canvas.width;
         this.height = this.canvas.height;
         this.ratio = this.height / this.baseHeight;
-
+        this.background.resize();
         this.gravity = 0.15 * this.ratio;
+        
+        this.speed = 30 * this.ratio;
 
         this.player.resize();
     } 
     render(){
+        this.background.update();
+        this.background.draw();
         this.player.update();
         this.player.draw();
     }
