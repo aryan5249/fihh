@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Bungee", sans-serif;
 }
 #canvas1{
     position: absolute;
@@ -12,4 +13,23 @@
 }
 .assets {
     display: none;
+}
+
+#replayButton {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    padding: 15px 40px;
+    font-size: 24px;
+    font-family: 'Bungee'
+    color= rgb(114, 114, 114);
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+#replayButton:hover {
+    background-color: #a97503;
 }
