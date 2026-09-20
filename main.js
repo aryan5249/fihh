@@ -11,7 +11,7 @@
             this.gravity;
             this.speed;
             this.obstacles = [];
-            this.numberOfObstacles = 1000;
+            this.numberOfObstacles = 200;
             this.score;
             this.timer;
             this.gameOver;
